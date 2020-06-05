@@ -11,6 +11,23 @@
 
 (function() {
 
-    // your code here
+    // Not finished yet
+    var age;
+    age = prompt("How old are you ?");
+    
+    var gender;
+    gender = prompt("What is your gender ?");
+
+    var town;
+    town = prompt("Where do you live ?");
+
+    if (askingData() === true) {
+        confirm("Est-ce bien correct ?\n\nVotre âge : " + data[0] + "\nVotre sexe : " + data[1] + "\nVotre lieu de résidence : " + data[2]);
+        alert("Saved !");
+    }
+
+    else {
+        askingData();
+    }
 
 })();
