@@ -13,8 +13,14 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+        var squareNumbers = [];
+        
+        for (var i = 1; i <= 21; i++) {
+            var result = i * i;
+            squareNumbers.push(result);
+        }
 
+        alert(squareNumbers);
     });
 
 })();
