@@ -11,6 +11,18 @@
 
 (function() {
 
-  // your code here
+  var choice;
+  choice = prompt("Do you want some cake ?");
+  yesOrNo();
+
+  function yesOrNo() {
+    if (choice == "yes") {
+      alert("Awesome ! Let's party");
+    }
+
+    else {
+      alert("More cake for me then :p !");
+    }
+  }
 
 })();
