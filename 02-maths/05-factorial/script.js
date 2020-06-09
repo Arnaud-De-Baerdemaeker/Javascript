@@ -14,9 +14,22 @@
     // to get the value of an input: document.getElementById("element-id").value
 
     document.getElementById("run").addEventListener("click", function() {
+        // étape 1 : récupérer la valeur de input
+        var input = document.getElementById("number").value;
 
-        // your code here
+        // étape 2 : convertir la valeur de input en nombre
+        var num = parseInt(input, 10);
 
+        // étape 3 : réaliser la factorielle
+        function factorial(num) {
+            var i, num, fact = 1;
+            for (i = 1; i <= num; i++) {
+                fact = fact * i;
+            }
+            return fact;
+        }
+
+        alert(factorial(num));
     });
 
 })();

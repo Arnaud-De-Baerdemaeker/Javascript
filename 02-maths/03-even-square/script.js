@@ -20,7 +20,7 @@
             squareNumbers.push(result);
         }
 
-        alert(squareNumbers);
+        alert(squareNumbers.join(", "));
     });
 
 })();

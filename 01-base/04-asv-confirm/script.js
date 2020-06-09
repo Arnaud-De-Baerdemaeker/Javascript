@@ -11,23 +11,23 @@
 
 (function() {
 
-    // Not finished yet
-    var age;
-    age = prompt("How old are you ?");
+    asking();
     
-    var gender;
-    gender = prompt("What is your gender ?");
+    function asking() {
+        var age, gender, town;
+        var confirmation;
+        
+        do {
+            age = prompt("How old are you ?");
+            gender = prompt("What is your gender ?");
+            town = prompt("Where do you live ?");
 
-    var town;
-    town = prompt("Where do you live ?");
+            alert("You are " + age + " years old. You are a " + gender + " and you live in " + town);
+            
+            confirmation = confirm("Is it correct ?");
+        }
 
-    if (askingData() === true) {
-        confirm("Est-ce bien correct ?\n\nVotre âge : " + data[0] + "\nVotre sexe : " + data[1] + "\nVotre lieu de résidence : " + data[2]);
-        alert("Saved !");
-    }
-
-    else {
-        askingData();
-    }
+        while (confirmation == false);
+    } 
 
 })();
