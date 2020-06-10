@@ -11,20 +11,30 @@
 
 (function() {
 
-    var fruits = [
-        "apple",
-        "pear",
-        "raspberry",
-        "tomatos",
-        "kiwi",
-        "banana",
-        "orange",
-        "mandarin",
-        "durian",
-        "peache",
-        "grap",
-        "cherry",
-    ];
+    // Cliquer sur le bouton
+    document.getElementById("run").addEventListener("click", function() {
+        
+        // Variable tableau détenant toutes les valeurs
+        var fruits = [
+            "apple",
+            "pear",
+            "raspberry",
+            "tomatos",
+            "kiwi",
+            "banana",
+            "orange",
+            "mandarin",
+            "durian",
+            "peache",
+            "grap",
+            "cherry",
+        ];
+
+        // Boucle for pour afficher le contenu du tableau un à un dans la console
+        for (i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]);
+        }
+    });
 
     // your code here
 

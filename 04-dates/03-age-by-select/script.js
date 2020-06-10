@@ -15,25 +15,32 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // 2 - Récupérer et stocker le jour de naissance sélectionné
-        var day = document.getElementById("dob-day").value;
+        var date = parseInt(document.getElementById("dob-day").value);
 
         // 3 - Récupérer et stocker le mois de naissance sélectionné
-        var month = document.getElementById("dob-month").value;
+        var month = parseInt(document.getElementById("dob-month").value);
 
         // 4 - Récupérer et stocker l'année de naissance sélectionnée
-        var year = document.getElementById("dob-year").value;
+        var year = parseInt(document.getElementById("dob-year").value);
 
         // 5 - Montrer les valeurs récupérées
-        alert("Your birthdate is : " + day + " / " + month + " / " + year);
+        alert("Your birthdate is : " + date + " / " + month + " / " + year);
 
-        // 6 - Calcul de l'âge
-        // 6.1 - Récupérer la date du PC
-        var date = new Date();
+        // 6 - Récupérer la date du PC
+        var today = new Date();
+        var birthdate = new Date(year, month - 1, date);
 
-        // 6.2 - Obtenir l'âge en soustrayant l'année du PC par l'année sélectionnée
-        var age = date.getFullYear() - year;
+        var age = today.getFullYear() - birthdate.getFullYear();
 
-        alert("You are " + age + " years old");
+        var m = today.getMonth() - birthdate.getMonth();
+        
+        debugger
+        
+        if (m < 0 || (m === 0 && today.getDate() < birthdate.getDate())) {
+            age--;
+        }
+            
+        alert("You are " + age + " years old"); 
     });
 
 })();

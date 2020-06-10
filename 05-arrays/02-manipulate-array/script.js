@@ -11,18 +11,27 @@
 
 (function() {
 
-    var fruits = [
-        "pomme",
-        "poire",
-        "fraise",
-        "tomate",
-        "orange",
-        "mandarine",
-        "durian",
-        "pêche",
-        "raisin",
-        "cerise",
-    ];
+    document.getElementById("run").addEventListener("click", function() {
+
+        var fruits = [
+            "pomme",
+            "poire",
+            "fraise",
+            "tomate",
+            "orange",
+            "mandarine",
+            "durian",
+            "pêche",
+            "raisin",
+            "cerise",
+        ];
+
+        fruits.splice(0, 1, "banana");
+        fruits.splice(8, 1);
+        fruits.splice(9, 1, "kiwi")
+
+    });
+    
 
     // your code here
 
