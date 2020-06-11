@@ -26,6 +26,24 @@
         "cherry",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function() {
+
+        /*
+        for (i = 0; i < fruits.length; i++) {
+            if (fruits[i] === "apple") {
+                console.log("yes");
+            }
+        }
+        */
+        
+        if (fruits.includes("apple")) {
+            console.log("yes")
+        }
+
+        else {
+            console.log("no");
+        }
+
+    });
 
 })();

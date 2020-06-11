@@ -89,6 +89,25 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function() {
+
+        // Déclaration variable pour stocker les gens de plus de 18 ans
+        var over18 = [];
+
+        // Boucle for pour passer tous le contenu du tableau people
+        for (i = 0; i < people.length; i++) {
+            
+            // Si un objet affiche un âge supérieur à 18 ans
+            if (people[i].age > 18) {
+                
+                // Envoyer cet objet vers le tableau over18
+                over18.push(people[i]);
+            }
+        }
+
+        // Afficher le tableau over18 dans la console
+        console.log(over18);
+
+    });
 
 })();

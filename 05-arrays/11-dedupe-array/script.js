@@ -28,6 +28,12 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function() {
+
+        var fruitsCutted = new Set(fruits);
+        
+        console.log(fruitsCutted);
+
+    });
 
 })();

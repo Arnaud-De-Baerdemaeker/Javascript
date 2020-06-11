@@ -93,8 +93,7 @@
 
         people.forEach(element => {
             if (element.firstname === "Jean" && element.lastname === "Dupont") {
-                console.log(element.email + " ");
-                console.log(element);
+                console.log(element.email + ", situé à l'index " + people.indexOf(element));
             }
         });
         
