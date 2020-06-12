@@ -12,5 +12,26 @@
 (() => {
     const keys = ["name", "species", "age", "gender", "color"];
     const values = ["Skitty", "cat", 9, "female", "tabby"];
-    // your code here
+    
+    document.getElementById("run").addEventListener("click", function() {
+
+        var obj = {
+            key: keys,
+            value: values
+        };
+        
+        keys.forEach(function(value, index) {
+            obj.key = value;
+            obj.value = values[index];
+            newObj = {
+                value: obj.key,
+                index: obj.value
+            };
+            
+            console.log(newObj);  
+        });
+
+              
+
+    });
 })();

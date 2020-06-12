@@ -26,5 +26,34 @@
         os: "linux",
         user: null,
     };
-    // your code here
+    
+    document.getElementById("run").addEventListener("click", function() {
+
+        // Boucle forEach pour passer tous les éléments de l'objet
+        computers.forEach(function(object, index) {
+            
+
+            if (object.hasOwnProperty("available") === false) {
+                object.available;
+                object.available = defaultProps.available;
+            }
+
+            if (object.hasOwnProperty("user") === false) {
+                object.user;
+                object.user = defaultProps.user;
+            }
+
+            if (object.hasOwnProperty("os") === false) {
+                object.os;
+                object.os = defaultProps.os;
+            }
+            
+            console.log(computers[index]);
+        
+        });
+
+        
+        
+    });
+
 })();
