@@ -11,6 +11,10 @@
 
 (function() {
 
-    document.getElementsByClassName("target").innerHTML = "Owned";
+    let allTarget = document.querySelectorAll(".target");
+
+    for (i = 0; i < allTarget.length; i++) {
+        allTarget[i].innerHTML = "Owned";
+    };
 
 })();
