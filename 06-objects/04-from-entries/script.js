@@ -31,7 +31,5 @@
             console.log(newObj);  
         });
 
-              
-
     });
 })();

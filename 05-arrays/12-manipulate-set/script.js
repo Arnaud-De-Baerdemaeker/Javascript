@@ -25,8 +25,10 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        fruits.delete("apple", "cherry");
-        fruits.add("banana", "kiwi");
+        fruits.delete("apple");
+        fruits.delete("cherry");
+        fruits.add("banana");
+        fruits.add("kiwi");
 
         console.log(fruits);
 

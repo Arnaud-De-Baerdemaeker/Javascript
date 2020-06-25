@@ -48,12 +48,10 @@
         var total = tab.reduce(function(a, b) {
             return a + b;
         });
-
         document.getElementById("sum").innerHTML = total;
 
         // Renvoi de la moyenne de tous les nombres
-        var average = total / tab.length;
-        
+        var average = total / tab.length;        
         document.getElementById("average").innerHTML = average;
 
     });

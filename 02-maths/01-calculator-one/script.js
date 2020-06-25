@@ -12,6 +12,9 @@
 (function() {
     // to get the value of an input: document.getElementById("element-id").value
 
+    let n1 = document.getElementById("op-one");
+    let n2 = document.getElementById("op-two");
+
     document.getElementById("addition").addEventListener("click", function() {
         // perform an addition
     });

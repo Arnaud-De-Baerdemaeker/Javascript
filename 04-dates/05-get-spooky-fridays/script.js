@@ -11,11 +11,14 @@
 
 (function() {
 
-    document.getElementById("run").addEventListener("click", function() { // 1 - Fonction qui s'active au clic sur "run"
+    // 1 - Fonction qui s'active au clic sur "run"
+    document.getElementById("run").addEventListener("click", function() { 
 
-        var input = document.getElementById("year").value; // 2 - Récupérer la valeur de "year" et la stocker dans la variable getYear
-debugger
-        var year = new Date(input); // 3 - Définir l'année encodée dans Date et stocker dans la variable year
+        // 2 - Récupérer la valeur de "year" et la stocker dans la variable getYear
+        var input = document.getElementById("year").value; 
+
+        // 3 - Définir l'année encodée dans Date et stocker dans la variable year
+        var year = new Date(input); 
 
         
         

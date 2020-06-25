@@ -14,11 +14,10 @@
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
     
     var fullDate = new Date(); // 1 - Récupérer et stocker la date du PC
-    debugger
 
     var day = associateDay(); // 2 - Associer fonction associateDay() à la variable day
 
-    function associateDay(day) { // 2.1 - Déclarer la fonction associateDay()
+    function associateDay() { // 2.1 - Déclarer la fonction associateDay()
         var local = fullDate.getDay(); // 2.2 - Déclarer variable local et y stocker le numéro du jour de la semaine
         
         switch(local) { // 2.3 - switch pour associer le numéro du jour de la semaine récupéré au nom du jour
