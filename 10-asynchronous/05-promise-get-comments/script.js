@@ -10,29 +10,24 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+	// your code here
 
-    document.getElementById("run").addEventListener("click", () => {
-        
-        window.lib.getPosts()
-        
-        .then((resolve) => {
-            
-            resolve.forEach(element => {
-                
-                window.lib.getComments(element.id)
-                
-                .then((comment) => {
-                    
-                    // console.log(element.id);
-                    
-                    element.comment = comment;
-                })
-            });
+	document.getElementById("run").addEventListener("click", () => {
+		window.lib.getPosts()
+		
+		.then((resolve) => {
+			resolve.forEach(element => {
+				window.lib.getComments(element.id)
+				
+				.then((comment) => {
+					
+					// console.log(element.id);
+					
+					element.comment = comment;
+				})
+			});
 
-            console.log(resolve);
-        })
-
-
-    })
+			console.log(resolve);
+		})
+	})
 })();

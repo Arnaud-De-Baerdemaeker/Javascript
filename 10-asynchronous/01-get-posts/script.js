@@ -10,18 +10,18 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
-    
-    function firstCallBack(error, articlesArray) {
-        if (error === null) {
-            console.log(articlesArray);
-        }
-        else {
-            console.log("Oops !");
-        }
-    }
+	// your code here
+	
+	function firstCallBack(error, articlesArray) {
+		if (error === null) {
+			console.log(articlesArray);
+		}
+		else {
+			console.log("Oops !");
+		}
+	}
 
-    document.getElementById("run").addEventListener("click", function() {
-        window.lib.getPosts(firstCallBack);
-    });
+	document.getElementById("run").addEventListener("click", function() {
+		window.lib.getPosts(firstCallBack);
+	});
 })();

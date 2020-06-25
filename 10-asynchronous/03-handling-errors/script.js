@@ -10,22 +10,20 @@
 // You will have time to focus on it later.
 
 (() => {
-    
-    // your code here
+	
+	// your code here
 
-    function callBack(error, people) {
+	function callBack(error, people) {
+		if (error == null) {
+			console.log(people);
+		}
 
-        if (error == null) {
-            console.log(people);
-        }
+		else {
+			console.error(error);
+		}
+	}
 
-        else {
-            console.error(error);
-        }
-    }
-
-    document.getElementById("run").addEventListener("click", () => {
-
-        window.lib.getPersons(callBack);
-    });
+	document.getElementById("run").addEventListener("click", () => {
+		window.lib.getPersons(callBack);
+	});
 })();

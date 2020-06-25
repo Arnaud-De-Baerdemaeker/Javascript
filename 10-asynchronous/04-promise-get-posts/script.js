@@ -10,15 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
-    document.getElementById("run").addEventListener("click", () => {
-        window.lib.getPosts()
-        .then((resolve) => {
-            console.log(resolve);
-        })
+	// your code here
+	document.getElementById("run").addEventListener("click", () => {
+		window.lib.getPosts()
+		
+		.then((resolve) => {
+			console.log(resolve);
+		})
 
-        .catch((error) => {
-            console.error(error);
-        })
-    });
+		.catch((error) => {
+			console.error(error);
+		})
+	});
 })();

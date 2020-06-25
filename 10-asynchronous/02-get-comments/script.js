@@ -10,41 +10,31 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+	// your code here
 
-    function callBack(error, articlesArray) {
-        
-        if (error != null) {
-        
-            console.log("Oops !");
-        }
-        
-        else {
-            
-            //  articlesArray; 
+	function callBack(error, articlesArray) {
+		if (error != null) {
+			console.log("Oops !");
+		}
+		
+		else {
+			articlesArray.forEach((article) => {
+				window.lib.getComments(article.id, (error, commentsArray) => {
+					if (error == null) {
+						article.comments = commentsArray;
+					}
+		
+					else {
+						console.log("Oops !");
+					}
+				});
+			});
 
-            articlesArray.forEach((article) => {
+			console.log(articlesArray);
+		}
+	}
 
-                window.lib.getComments(article.id, (error, commentsArray) => {
-                    
-                    if (error == null) {
-                    
-                        article.comments = commentsArray;
-                    }
-                    
-                    else {
-                        
-                        console.log("Oops !");
-                    }
-                });
-            });
-
-            console.log(articlesArray);
-        }
-    }
-
-    document.getElementById("run").addEventListener("click", function() {
-        
-        window.lib.getPosts(callBack);
-    });
+	document.getElementById("run").addEventListener("click", function() {
+		window.lib.getPosts(callBack);
+	});
 })();

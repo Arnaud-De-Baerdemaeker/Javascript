@@ -10,18 +10,19 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+	// your code here
 
-    document.getElementById("run").addEventListener("click", () => {
-        
-        window.lib.getPersons()
-        .then(function(resolve) {
-            console.log(resolve);
-        })
+	document.getElementById("run").addEventListener("click", () => {
+		
+		window.lib.getPersons()
+		
+		.then(function(resolve) {
+			console.log(resolve);
+		})
 
-        .catch(function(error) {
-            console.error(error);
-        })
+		.catch(function(error) {
+			console.error(error);
+		})
 
-    })
+	})
 })();
