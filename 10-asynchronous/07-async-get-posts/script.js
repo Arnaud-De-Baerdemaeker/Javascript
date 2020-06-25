@@ -10,15 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+	// your code here
 
-    document.getElementById("run").addEventListener("click", () => {
-        
-        async function asyncFunction() {
-            let array = await window.lib.getPosts();
-            console.log(array);
-        }
+	document.getElementById("run").addEventListener("click", () => {
+		
+		async function asyncFunction() {
+			
+			let array = await window.lib.getPosts();
+			console.log(array);
+		}
 
-        asyncFunction();
-    })
+		asyncFunction();
+	})
 })();

@@ -10,22 +10,21 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+	// your code here
 
-    document.getElementById("run").addEventListener("click", () => {
+	document.getElementById("run").addEventListener("click", () => {
 
-        async function asyncFunction() {
+		async function asyncFunction() {
 
-            let array = await window.lib.getPersons()
-            
-            .then((value) => {
-                console.log(value);
-            })
-            .catch((error) => {
-                console.error(error);
-            });
-        }
+			let array = await window.lib.getPersons()
+			.then((value) => {
+				console.log(value);
+			})
+			.catch((error) => {
+				console.error(error);
+			});
+		}
 
-        asyncFunction();
-    });
+		asyncFunction();
+	});
 })();

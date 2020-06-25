@@ -17,7 +17,6 @@
 		.then((resolve) => {
 			console.log(resolve);
 		})
-
 		.catch((error) => {
 			console.error(error);
 		})

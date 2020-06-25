@@ -17,7 +17,6 @@
 		if (error == null) {
 			console.log(people);
 		}
-
 		else {
 			console.error(error);
 		}

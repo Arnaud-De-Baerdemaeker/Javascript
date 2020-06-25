@@ -15,15 +15,13 @@
 	function callBack(error, articlesArray) {
 		if (error != null) {
 			console.log("Oops !");
-		}
-		
+		}		
 		else {
 			articlesArray.forEach((article) => {
 				window.lib.getComments(article.id, (error, commentsArray) => {
 					if (error == null) {
 						article.comments = commentsArray;
-					}
-		
+					}		
 					else {
 						console.log("Oops !");
 					}

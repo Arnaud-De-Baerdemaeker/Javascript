@@ -10,27 +10,27 @@
 // You will have time to focus on it later.
 
 (() => {
-    
-    document.getElementById("run").addEventListener("click", () => {
+	
+	document.getElementById("run").addEventListener("click", () => {
 
-        async function asyncFunction() {
-            
-            let array = await window.lib.getPosts();
+		async function asyncFunction() {
+			
+			let array = await window.lib.getPosts();
 
-            array.forEach(element => {
+			array.forEach(element => {
 
-                window.lib.getComments(element.id)
+				window.lib.getComments(element.id)
 
-                .then((comment) => {
+				.then((comment) => {
 
-                    element.comment = comment;
-                    
-                })
-            })
+					element.comment = comment;
+					
+				})
+			})
 
-            console.log(array);
-        }
+			console.log(array);
+		}
 
-        asyncFunction();
-    })
+		asyncFunction();
+	})
 })();

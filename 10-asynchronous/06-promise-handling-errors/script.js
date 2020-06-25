@@ -19,7 +19,6 @@
 		.then(function(resolve) {
 			console.log(resolve);
 		})
-
 		.catch(function(error) {
 			console.error(error);
 		})
