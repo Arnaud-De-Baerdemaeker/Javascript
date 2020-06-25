@@ -28,7 +28,7 @@
 		.then(function(infosFromHeroes) {
 
 			newHero = {
-				id: 6,
+				id: infosFromHeroes.length + 1,
 				name: name,
 				alterEgo: alterEgo,
 				abilities: powers.split(",")
