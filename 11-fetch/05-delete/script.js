@@ -22,18 +22,21 @@
 			
 			return infosFromHeroes.json();
 		})
-
 		.then(function(infosFromHeroes) {
+			
+			for (index = 0; index < infosFromHeroes.length; index++) {
 
-			infosFromHeroes.forEach(function(item) {
+				if (heroId == index) {
 				
-				if (heroId == item.id) {
-				
-					delete item;
+					delete infosFromHeroes[index];
 				}
+			}
 
-				console.log(infosFromHeroes);
-			})
+			console.log(infosFromHeroes);
+		})
+		.catch(function(error) {
+
+			console.error(error);
 		})
 	})
 })();
