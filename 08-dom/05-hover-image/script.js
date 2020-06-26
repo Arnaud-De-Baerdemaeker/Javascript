@@ -11,6 +11,19 @@
 
 (function() {
 
-    // your code here
+	// your code here
 
+	const image = document.getElementsByTagName("img")[0]
+	let srcData = image.getAttribute("src");
+	let dataHover = image.getAttribute("data-hover");
+
+	image.addEventListener("mouseover", () => {
+		
+		image.setAttribute("src", dataHover);
+	});
+	
+	image.addEventListener("mouseout", () => {
+		
+		image.setAttribute("src", srcData);
+	});
 })();

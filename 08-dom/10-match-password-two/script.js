@@ -11,6 +11,26 @@
 
 (function() {
 
-    // your code here
+	// your code here
 
+	let passwordSelect = document.getElementById(`pass-one`);
+	let passwordConfirm = document.getElementById(`pass-two`);
+
+	document.getElementById(`run`).addEventListener(`click`, () => {
+
+		/*
+		if ((passwordSelect == "") && (passwordConfirm == "")) {
+			alert("Veuillez indiquer au moins un caractère pour votre mot de passe svp !");
+		}
+		else if (passwordSelect === passwordConfirm) {
+			alert("Le mot de passe introduit est bien identique à sa confirmation !");
+		}
+		else
+		*/
+
+		if (passwordSelect.value != passwordConfirm.value) {
+			document.getElementById(`pass-one`).classList.add(`error`);
+			document.getElementById(`pass-two`).classList.add(`error`);
+		}
+	});
 })();

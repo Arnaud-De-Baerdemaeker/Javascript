@@ -11,6 +11,25 @@
 
 (function() {
 
-    // your code here
+	// your code here
 
+	//définir variable compteur i
+	let i = 0;
+	let a = 0;
+
+	//évènement saisie de touche clavier sur l'input
+	document.querySelector("input").onkeyup = function() {
+		
+		i++;
+		let u = document.getElementById("pass-one").value;
+		let reG = /\d/;
+
+		if (reG.test(u)) {
+			a++;
+		};
+
+		if (i >= 8 && a >= 2) {
+			document.getElementById("validity").innerHTML = "OK";
+		};
+	};
 })();

@@ -11,6 +11,15 @@
 
 (function() {
 
-    // your code here
+	// your code here
 
+	let table = "<table>"
+	
+	for (var i = 0; i < 10; i++) {
+		table += "<tr><td>ligne "+(i+1)+"</td></tr>"
+	}
+
+	table += "</table>"
+	
+	document.getElementById('target').innerHTML = table;
 })();

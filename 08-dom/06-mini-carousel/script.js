@@ -11,14 +11,30 @@
 
 (function() {
 
-    var gallery= [
-        "../../_shared/img/bell.svg",
-        "../../_shared/img/clock.svg",
-        "../../_shared/img/compass.svg",
-        "../../_shared/img/lemon.svg",
-        "../../_shared/img/map.svg",
-    ];
+	var gallery= [
+		"../../_shared/img/bell.svg",
+		"../../_shared/img/clock.svg",
+		"../../_shared/img/compass.svg",
+		"../../_shared/img/lemon.svg",
+		"../../_shared/img/map.svg",
+	];
 
-    // your code here
+	// your code here
 
+	const image = document.querySelector("img"); 
+	let i = 0;
+
+	document.getElementById("next").addEventListener("click", () => {
+		
+		i++
+		// On incrémente de 1 pour faire défiler les images
+		
+		if (i >= gallery.length) {      
+			// En fin de longueur du tableau, on redémarre au début de l'index
+			i = 0;  
+		}
+
+		image.src = gallery[i];   
+		// On associe image aux éléments du tableau (suivant le numéro d'index)
+	});
 })();
