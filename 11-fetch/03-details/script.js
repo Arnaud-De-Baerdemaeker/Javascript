@@ -31,7 +31,7 @@
 				let templateClone = template.cloneNode(true);
 
 				if (input == item.id) {
-				
+					
 					templateClone.querySelector(".name").innerHTML = item.name;
 					templateClone.querySelector(".alter-ego").innerHTML = item.alterEgo;
 					templateClone.querySelector(".powers").innerHTML = item.abilities.join(", ");

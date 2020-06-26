@@ -26,13 +26,13 @@
 			
 			for (index = 0; index < infosFromHeroes.length; index++) {
 
-				if (heroId == index) {
+				if (heroId == index + 1) {
 				
 					delete infosFromHeroes[index];
 				}
 			}
 
-			console.log(infosFromHeroes);
+			console.table(infosFromHeroes);
 		})
 		.catch(function(error) {
 
